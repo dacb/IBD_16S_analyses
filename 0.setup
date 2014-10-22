@@ -25,7 +25,9 @@ then
 fi
 
 echo creating symlinks to data
-ln -sf ../../2014_*/fasta-qual-mapping-files/*illumina-full.* .
+ln -sf ../../2014_*/fasta-qual-mapping-files/*fasta .
+ln -sf ../../2014_*/fasta-qual-mapping-files/*qual .
+# these are manually currated
 #ln -sf ../../2014_*/fasta-qual-mapping-files/*illumina-mapping2.txt* .
 
 echo making fastq
