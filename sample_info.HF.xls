@@ -1,0 +1,41 @@
+#SampleID	mouse ID	cage	diet	Time 
+s07_m1	1L	250.1	AIN93M	baseline
+s07_m10	2R	250.4a	AIN93M 	baseline
+s07_m11	1L	250.5	AIN93M 	baseline
+s07_m12	2L	250.5	AIN93M 	baseline
+s07_m13	3R	250.5	AIN93M 	baseline
+s07_m14	1R	250.6	AIN93M 	baseline
+s07_m15	1L, 1R	250.6	AIN93M 	baseline
+s07_m16	1L	250.7	AIN93M 	baseline
+s07_m17	2L	250.7	AIN93M 	baseline
+s07_m18	3R	250.7	AIN93M 	baseline
+s07_m19	1R	250.8	AIN93M 	baseline
+s07_m2	1R	250.1	AIN93M 	baseline
+s07_m20	2R	250.8	AIN93M 	baseline
+s07_m21	1L	250.1	AIN93M	2 weeks
+s07_m22	1R	250.1	AIN93M 	2 weeks
+s07_m23	3R	250.1	AIN93M	2 weeks
+s07_m24	1R	250.2	AIN93M	2 weeks
+s07_m25	2R	250.2	AIN93M	2 weeks
+s07_m26	1L	250.3	AIN93M	2 weeks
+s07_m27	2L	250.3	AIN93M	2 weeks
+s07_m28	3R	250.3	AIN93M	2 weeks
+s07_m29	1R	250.4a	AIN93M	2 weeks
+s07_m3	3R	250.1	AIN93M	baseline
+s07_m30	2R	250.4a	AIN93M 	2 weeks
+s07_m31	1L	250.5	HF	2 weeks
+s07_m32	2L	250.5	HF	2 weeks
+s07_m33	3R	250.5	HF	2 weeks
+s07_m34	1R	250.6	HF	2 weeks
+s07_m35	1L, 1R	250.6	HF	2 weeks
+s07_m36	1L	250.7	HF	2 weeks
+s07_m37	2L	250.7	HF	2 weeks
+s07_m38	3R	250.7	HF	2 weeks
+s07_m39	1R	250.8	HF	2 weeks
+s07_m4	1R	250.2	AIN93M	baseline
+s07_m40	2R	250.8	HF	2 weeks
+s07_m5	2R	250.2	AIN93M	baseline
+s07_m6	1L	250.3	AIN93M	baseline
+s07_m7	2L	250.3	AIN93M	baseline
+s07_m8	3R	250.3	AIN93M	baseline
+s07_m9	1R	250.4a	AIN93M	baseline
