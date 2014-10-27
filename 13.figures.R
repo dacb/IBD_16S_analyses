@@ -10,7 +10,7 @@ library(RColorBrewer)
 library(ggplot2)
 #library(reshape)
 
-columns_to_use <- 29
+columns_to_use <- 68
 
 pdf("./13.figures.heatmap.pdf")
 
@@ -21,6 +21,7 @@ head(raw_otus)
 
 sample_read_sums <- read.table("13.figures.read_sums.xls", header=T, row.names=1, sep="\t")
 sample_read_sums
+dim(sample_read_sums)
 
 # normalize the raw_otu matrix to % of reads
 otus_pcnt <- scale(raw_otus, center=FALSE, scale=t(sample_read_sums))
@@ -44,7 +45,7 @@ head(log_otus)
 
 write.table(log_otus, file="13.figures.log_otus.tab", quote=F, sep="\t")
 
-heatmap.3(as.matrix(log_otus), as.matrix(otus_pcnt), key=T, distfun=vegdist, col=brewer.pal(9, "YlGnBu"), hclustfun = function(x) hclust(x,method = 'average'), scale='none', na.rm=T, na.color="white", density.info='none', trace='none', KeyValueName="ln Reads", symkey=F, symbreaks=F, sepcolor="lightgrey", rowsep=c(1:27), colsep=c(1:35))
+heatmap.3(as.matrix(log_otus), as.matrix(otus_pcnt), key=T, distfun=vegdist, col=brewer.pal(9, "YlGnBu"), hclustfun = function(x) hclust(x,method = 'average'), scale='none', na.rm=T, na.color="white", density.info='none', trace='none', KeyValueName="ln Reads", symkey=F, symbreaks=F, sepcolor="lightgrey", rowsep=c(1:100), colsep=c(1:100))
 
 # stacked histogram
 library(latticeExtra)
@@ -62,8 +63,8 @@ for(sample in levels(otus_reshaped$sample)) {
 dev.off()
 
 # diversity estimates
-# load the data from variableO2_illumina_analyses.xls
-d <- read.table("variableO2_illumina_analyses.xls", sep='\t', quote='', comment.char='', header=T, row.names=1);
+# load the data from IBD_diet.xls
+d <- read.table("IBD_diet.xls", sep='\t', quote='', comment.char='', header=T, row.names=1);
 otus <- d[,1:columns_to_use]
 head(otus)
 
