@@ -34,7 +34,7 @@ SELECT otus.OTUId,
 SELECT ot.OTUId,
 EOF
 
-awk -F'\t' '{ if (line >= 1) { printf("\t\t%s AS \"%s\",\n", $1, $1); } ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
+awk -F'\t' '{ if (line >= 1) { printf("\t\t%s AS \"%s\",\n", $1, $1); } ++line; }' $SAMPLE_INFO >> $SQL
 
 cat << EOF >> $SQL
 		domain, domain_confidence, phylum, phylum_confidence, class, class_confidence,
@@ -46,7 +46,7 @@ cat << EOF >> $SQL
 	ORDER BY ( 0
 EOF
 
-awk -F'\t' '{ if (line >= 1) { printf("\t\t\t+ %s\n", $1); } ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
+awk -F'\t' '{ if (line >= 1) { printf("\t\t\t+ %s\n", $1); } ++line; }' $SAMPLE_INFO >> $SQL
 
 cat << EOF >> $SQL
 		) DESC

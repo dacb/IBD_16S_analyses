@@ -11,9 +11,9 @@ RDPT=~dacb/RDPTools
 CLFRJAR=$RDPT/classifier.jar
 
 HOST=`mysql_host`
-DB=IBD_diet
+DB=hvd
 
-RUNS="071814JP27F 082114JP27F"
+RUNS="082114JP27F 101614JP27F"
 PRIMER=AGRGTTTGATCMTGGCTCAG
 
 TRUNCLEN=380
@@ -21,6 +21,7 @@ MAXEE=0.5
 CLUSTER_IDENT=0.97
 
 SAMPLE_INFO=sample_info.xls
-SAMPLE_INFO_SUBSET=sample_info.subset.xls
+SAMPLE_INFO_FT_SUBSET=sample_info.fecal_trans.xls
+SAMPLE_INFO_GF_SUBSET=sample_info.germ_free.xls
 
 OUTPUT_NAME=$DB

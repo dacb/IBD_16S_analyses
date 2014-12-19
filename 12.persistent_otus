@@ -14,8 +14,8 @@ SELECT ot.OTUId,
 EOF
 
 #head -1 $IN | awk '{ for (i = 2; i <= NF; ++i) print $i }' | sort -n | awk '{ printf("\t\t%s,\n", $1); }' >> $SQL
-#awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) { printf("\t\tROUND((%s / (SELECT SUM(%s) FROM %s)) * 100, 2) AS \"%s.%s\",\n", $1, $1, otu_table, $2, $3); } ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
-awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) { printf("\t\t%s,\n", $1); } ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
+#awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) { printf("\t\tROUND((%s / (SELECT SUM(%s) FROM %s)) * 100, 2) AS \"%s.%s\",\n", $1, $1, otu_table, $2, $3); } ++line; }' $SAMPLE_INFO >> $SQL
+awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) { printf("\t\t%s,\n", $1); } ++line; }' $SAMPLE_INFO >> $SQL
 
 cat << EOF >> $SQL
 		sequence
@@ -25,16 +25,16 @@ cat << EOF >> $SQL
 EOF
 
 # 1%
-#awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) printf("\t\tOR (%s / (SELECT SUM(%s) FROM %s) > 0.01)\n", $1, $1, otu_table); ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
+#awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) printf("\t\tOR (%s / (SELECT SUM(%s) FROM %s) > 0.01)\n", $1, $1, otu_table); ++line; }' $SAMPLE_INFO >> $SQL
 # 2.5%
-awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) printf("\t\tOR (%s / (SELECT SUM(%s) FROM %s) > 0.025)\n", $1, $1, otu_table); ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
+awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) printf("\t\tOR (%s / (SELECT SUM(%s) FROM %s) > 0.025)\n", $1, $1, otu_table); ++line; }' $SAMPLE_INFO >> $SQL
 
 cat << EOF >> $SQL
 	GROUP BY ot.OTUId
 	ORDER BY ( 0
 EOF
 
-awk -F'\t' '{ if (line >= 1) { printf("\t\t\t+ %s\n", $1); } ++line; }' $SAMPLE_INFO_SUBSET >> $SQL
+awk -F'\t' '{ if (line >= 1) { printf("\t\t\t+ %s\n", $1); } ++line; }' $SAMPLE_INFO >> $SQL
 
 cat << EOF >> $SQL
 		) DESC

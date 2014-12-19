@@ -10,7 +10,7 @@ library(RColorBrewer)
 library(ggplot2)
 #library(reshape)
 
-columns_to_use <- 68
+columns_to_use <- 40
 
 pdf("./13.figures.heatmap.pdf")
 
@@ -47,6 +47,16 @@ write.table(log_otus, file="13.figures.log_otus.tab", quote=F, sep="\t")
 
 heatmap.3(as.matrix(log_otus), as.matrix(otus_pcnt), key=T, distfun=vegdist, col=brewer.pal(9, "YlGnBu"), hclustfun = function(x) hclust(x,method = 'average'), scale='none', na.rm=T, na.color="white", density.info='none', trace='none', KeyValueName="ln Reads", symkey=F, symbreaks=F, sepcolor="lightgrey", rowsep=c(1:100), colsep=c(1:100))
 
+dev.off()
+
+
+pdf("./13.figures.MDS.pdf")
+
+ord <- metaMDS(otus)
+plot(ord, type = "n")
+#points(ord, display = "sites", cex = 0.8, pch=21, col="cyan", bg="white")
+text(ord, display = "spec", cex=0.7, col="blue")
+
 # stacked histogram
 library(latticeExtra)
 
@@ -63,8 +73,8 @@ for(sample in levels(otus_reshaped$sample)) {
 dev.off()
 
 # diversity estimates
-# load the data from IBD_diet.xls
-d <- read.table("IBD_diet.xls", sep='\t', quote='', comment.char='', header=T, row.names=1);
+# load the data from IBD_germfree.xls
+d <- read.table("IBD_germfree.xls", sep='\t', quote='', comment.char='', header=T, row.names=1);
 otus <- d[,1:columns_to_use]
 head(otus)
 
