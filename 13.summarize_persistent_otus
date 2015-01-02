@@ -1,0 +1,31 @@
+#!/bin/bash
+
+source globals
+
+pers_table=persistent_OTUs
+
+function sum_per {
+	sample_info=$1
+	prefix=$0.$2
+	SQL=$prefix.sql
+	XLS=$prefix.xls
+
+cat << EOF > $SQL
+SELECT 
+EOF
+
+awk -F'\t' -v otu_table="$otu_table" '{ if (line >= 1) { printf("\t\tSUM(%s) AS %s,\n", $1, $1); } ++line; }' $sample_info >> $SQL
+
+cat << EOF >> $SQL
+		best_tax, AVG(best_tax_confidence) AS best_tax_confidence_mean, best_tax_level
+	FROM $pers_table AS p
+	GROUP BY best_tax, best_tax_confidence, best_tax_level
+;
+EOF
+
+	mysql -h $HOST $DB < $SQL > $XLS
+	sed -i 's/\\t/\t/g' $XLS
+}
+
+sum_per sample_info.fecal_trans.xls ft
+sum_per sample_info.germ_free.xls gf
