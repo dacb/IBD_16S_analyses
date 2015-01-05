@@ -24,4 +24,7 @@ SAMPLE_INFO=sample_info.xls
 SAMPLE_INFO_FT_SUBSET=sample_info.fecal_trans.xls
 SAMPLE_INFO_GF_SUBSET=sample_info.germ_free.xls
 
+PERSISTENT_PCNT=0.025
+PERSISTENT_BEST_PCNT=.85
+
 OUTPUT_NAME=$DB

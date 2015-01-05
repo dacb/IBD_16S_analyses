@@ -1,41 +1,39 @@
-#sample	cage	animal	week	fecal	gender	notes	index	prefix
-C1RM_1	1	R	1	control diet	male		1	s10_m
-C1LM_1	1	L	1	control diet	male		2	s10_m
-C1NM_1	1	N	1	control diet	male		3	s10_m
-C2RF_1	2	R	1	control diet	female		4	s10_m
-C2LF_1	2	L	1	control diet	female		5	s10_m
-C2NF_1	2	N	1	control diet	female		6	s10_m
-D3RM_1	3	R	1	HVD diet	male		7	s10_m
-D3LM_1	3	L	1	HVD diet	male		8	s10_m
-D3NM_1	3	N	1	HVD diet	male		9	s10_m
-D4RF_1	4	R	1	HVD diet	female		10	s10_m
-D4LF_1	4	L	1	HVD diet	female		11	s10_m
-D4NF_1	4	N	1	HVD diet	female		12	s10_m
-D_donor_nRL	NA	donor	NA	HVD diet	NA	no RNAlater	13	s10_m
-C_donor_nRL	NA	donor	NA	control diet	NA	no RNAlater	14	s10_m
-D_donor	NA	donor	NA	HVD diet	NA	RNAlater	15	s10_m
-C_donor	NA	donor	NA	control diet	NA	RNAlater	16	s10_m
-C1RM_2	1	R	2	control diet	male		17	s10_m
-C1LM_2	1	L	2	control diet	male		18	s10_m
-C1NM_2	1	N	2	control diet	male		19	s10_m
-C2RF_2	2	R	2	control diet	female		20	s10_m
-C2LF_2	2	L	2	control diet	female		21	s10_m
-C2NF_2	2	N	2	control diet	female		22	s10_m
-D3RM_2	3	R	2	HVD diet	male		23	s10_m
-D3LM_2	3	L	2	HVD diet	male		24	s10_m
-D3NM_2	3	N	2	HVD diet	male		25	s10_m
-D4RF_2	4	R	2	HVD diet	female		26	s10_m
-D4LF_2	4	L	2	HVD diet	female		27	s10_m
-D4NF_2	4	N	2	HVD diet	female		28	s10_m
-C1RM_4	1	R	4	control diet	male		29	s10_m
-C1LM_4	1	L	4	control diet	male		30	s10_m
-C1NM_4	1	N	4	control diet	male		31	s10_m
-C2RF_4	2	R	4	control diet	female		32	s10_m
-C2LF_4	2	L	4	control diet	female		33	s10_m
-C2NF_4	2	N	4	control diet	female		34	s10_m
-D3RM_4	3	R	4	HVD diet	male		35	s10_m
-D3LM_4	3	L	4	HVD diet	male		36	s10_m
-D3NM_4	3	N	4	HVD diet	male		37	s10_m
-D4RF_4	4	R	4	HVD diet	female		38	s10_m
-D4LF_4	4	L	4	HVD diet	female		39	s10_m
-D4NF_4	4	N	4	HVD diet	female		40	s10_m
+sample	cage	animal	week	diet	gender	notes	index	prefix
+C1RM_1	1	R	1	control	male		1	s10_m
+C1LM_1	1	L	1	control	male		2	s10_m
+C1NM_1	1	N	1	control	male		3	s10_m
+C2RF_1	2	R	1	control	female		4	s10_m
+C2LF_1	2	L	1	control	female		5	s10_m
+C2NF_1	2	N	1	control	female		6	s10_m
+D3RM_1	3	R	1	HVD	male		7	s10_m
+D3LM_1	3	L	1	HVD	male		8	s10_m
+D3NM_1	3	N	1	HVD	male		9	s10_m
+D4RF_1	4	R	1	HVD	female		10	s10_m
+D4LF_1	4	L	1	HVD	female		11	s10_m
+D4NF_1	4	N	1	HVD	female		12	s10_m
+D_donor	NA	donor	NA	HVD	NA	RNAlater	15	s10_m
+C_donor	NA	donor	NA	control	NA	RNAlater	16	s10_m
+C1RM_2	1	R	2	control	male		17	s10_m
+C1LM_2	1	L	2	control	male		18	s10_m
+C1NM_2	1	N	2	control	male		19	s10_m
+C2RF_2	2	R	2	control	female		20	s10_m
+C2LF_2	2	L	2	control	female		21	s10_m
+C2NF_2	2	N	2	control	female		22	s10_m
+D3RM_2	3	R	2	HVD	male		23	s10_m
+D3LM_2	3	L	2	HVD	male		24	s10_m
+D3NM_2	3	N	2	HVD	male		25	s10_m
+D4RF_2	4	R	2	HVD	female		26	s10_m
+D4LF_2	4	L	2	HVD	female		27	s10_m
+D4NF_2	4	N	2	HVD	female		28	s10_m
+C1RM_4	1	R	4	control	male		29	s10_m
+C1LM_4	1	L	4	control	male		30	s10_m
+C1NM_4	1	N	4	control	male		31	s10_m
+C2RF_4	2	R	4	control	female		32	s10_m
+C2LF_4	2	L	4	control	female		33	s10_m
+C2NF_4	2	N	4	control	female		34	s10_m
+D3RM_4	3	R	4	HVD	male		35	s10_m
+D3LM_4	3	L	4	HVD	male		36	s10_m
+D3NM_4	3	N	4	HVD	male		37	s10_m
+D4RF_4	4	R	4	HVD	female		38	s10_m
+D4LF_4	4	L	4	HVD	female		39	s10_m
+D4NF_4	4	N	4	HVD	female		40	s10_m
