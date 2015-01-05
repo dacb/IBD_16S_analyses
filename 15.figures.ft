@@ -1,0 +1,7 @@
+#!/bin/bash
+
+awk -F'\t' -v prefix="$0" -f $0.awk 13.summarize_persistent_otus.ft.percent.rehsaped.xls 
+gnuplot $0.gplt
+
+R --no-save < 15.figures.ft.MDS.R
+R --no-save < 15.figures.ft.heatmap.R
