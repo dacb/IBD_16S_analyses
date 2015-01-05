@@ -8,7 +8,9 @@
 		if ($1 == "Donor")
 			file = prefix ".Donor.tab";
 		else
-			file = prefix "." substr($1, 1, 2) ".tab";
+			# by week
+			file = prefix ".week" substr($1, 5, 1) ".tab";
+# by animal		file = prefix "." substr($1, 1, 2) ".tab";
 		if (first[file] == 0) {
 			first[file] = 1;
 			printf("%s", header[1]) > file;
